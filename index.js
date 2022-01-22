@@ -1,12 +1,9 @@
 const input = document.querySelector('#radius_input')
-let inputContent = null
-input.addEventListener('change', () => {inputContent = input.value})
+let radius = null
+input.addEventListener('change', () => {radius = input.value})
 
 const button = document.querySelector('#button')
+const area = Math.PI * radius**2
 
-const alerta = () => {
-  alert('it works')
-  console.log(inputContent)
-}
 
-button.addEventListener('click', alerta)
+button.addEventListener('click', )
