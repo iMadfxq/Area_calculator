@@ -1,26 +1,37 @@
-let input = document.querySelector('#radius_input')
-let radius = 0
-input.addEventListener('change', () => {radius = input.value})
 
 let root = document.querySelector('#root')
-
+let p = document.createElement('p')
+let input = document.querySelector('#radius_input')
 let button = document.querySelector('#button')
 
+let radius
 let area = () => {
   let a = Math.trunc(Math.PI * radius ** 2)
   return a
 }
-function alerta() {
-  let p = document.createElement('p')
-  p.textContent = `the area of your circle is ${area()}`
-  if (root.innerHTML.includes('<p>')){
-    let old = root.querySelector('p')
-    old.remove()
+
+input.addEventListener('change', changeValues)
+function changeValues() {
+  radius = input.value
+  if (radius <= 0) {
+    button.disabled = true
+    p.textContent = `A circle can't have a radius of ${radius}`
     root.appendChild(p)
-  } else {
-    root.appendChild(p)
+  }
+  else {
+    p.remove()
+    button.disabled = false
+    p.textContent = `the area of your circle is ${area()}`
+    function alerta() {
+      if (root.innerHTML.includes('<p>')){
+        let old = root.querySelector('p')
+        old.remove()
+        root.appendChild(p)
+      } else {
+          root.appendChild(p)
+      }
+    }
+    button.addEventListener('click', alerta)
   }
 }
 
-
-button.addEventListener('click', alerta)
