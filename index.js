@@ -34,4 +34,3 @@ function changeValues() {
     button.addEventListener('click', alerta)
   }
 }
-

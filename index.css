@@ -4,21 +4,67 @@
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+  color: white;
+  font-family: 'Lora', serif;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(236,66,127,1) 100%);
 }
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 310px;
   height: 300px;
+  background-color: rgba(255, 115, 115, 0.14);
+  border-radius: 10px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+  margin-top: 45px;
+}
+label {
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+}
+input {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+}
+button {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-family: 'Lora', serif;
+  transition: 300ms;
+}
+button:hover {
+  transform: scale(1.1);
+}
+p {
+  font-size: 1.5rem;
 }
