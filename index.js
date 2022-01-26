@@ -3,6 +3,7 @@ let root = document.querySelector('#root')
 let p = document.createElement('p')
 let input = document.querySelector('#radius_input')
 let button = document.querySelector('#button')
+let form = document.querySelector('form')
 
 let radius
 let area = () => {
@@ -22,7 +23,8 @@ function changeValues() {
     p.remove()
     button.disabled = false
     p.textContent = `the area of your circle is ${area()}`
-    function alerta() {
+    form.addEventListener('submit', e => {
+      e.preventDefault()
       if (root.innerHTML.includes('<p>')){
         let old = root.querySelector('p')
         old.remove()
@@ -30,7 +32,6 @@ function changeValues() {
       } else {
           root.appendChild(p)
       }
-    }
-    button.addEventListener('click', alerta)
+    })
   }
 }
