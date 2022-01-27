@@ -14,11 +14,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(236,66,127,1) 100%);
 }
-section {
+.background {
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(236,66,127,1) 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#root {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,4 +76,34 @@ button:hover {
 }
 p {
   font-size: 1.5rem;
+}
+
+.footer__info {
+  width: 100vw;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.footer__info a {
+  color: white;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.footer__info a:hover {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+.footer__info span {
+  color: red;
+  margin-inline-start: 5px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: underline;
 }
